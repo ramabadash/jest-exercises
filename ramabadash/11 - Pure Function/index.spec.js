@@ -1,11 +1,15 @@
 // setPrice(item: Object, price: Number) => item: Object
 const setPrice = (item, price) => {
-  // TODO: implement
+  const copy = Object.assign({}, item);
+  copy.price = price;
+  return copy;
 };
 
 // addToCart(cart: Array, item: Object) => cart: Array
 const addToCart = (cart, item) => {
-  // TODO: implement
+  const newCart = cart.slice();
+  newCart.push(item);
+  return newCart;
 };
 
 describe('setPrice()', () => {
